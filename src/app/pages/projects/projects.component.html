@@ -1,0 +1,52 @@
+<section class="projects-wrapper">
+  <header class="page-header">
+    <h2>Proyectos Destacados</h2>
+    <p>
+      Soluciones desarrolladas tanto para retos académicos como para necesidades comerciales reales.
+    </p>
+  </header>
+
+  <div class="projects-list">
+    @for (project of projectList(); track project.id) {
+      <article class="project-box">
+        <div class="project-header">
+          <span class="category">{{ project.category }}</span>
+          <h3>{{ project.title }}</h3>
+        </div>
+
+        <p class="summary">{{ project.summary }}</p>
+
+        <div class="highlights">
+          <strong>Puntos clave:</strong>
+          <ul>
+            @for (item of project.highlights; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="tags">
+          @for (tech of project.tech; track tech) {
+            <span class="tag">{{ tech }}</span>
+          }
+        </div>
+
+        <div class="links">
+          <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="link-btn">
+            Código en GitHub &rarr;
+          </a>
+          <!-- @if (project.demoUrl) {
+            <a
+              [href]="project.demoUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-btn outline"
+            >
+              Ver Demo &nearr;
+            </a> 
+          }-->
+        </div>
+      </article>
+    }
+  </div>
+</section>

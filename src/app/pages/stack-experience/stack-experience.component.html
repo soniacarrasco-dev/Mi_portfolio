@@ -1,0 +1,28 @@
+<section class="experience-wrapper">
+  <header class="section-intro">
+    <h2>Sinergia Angular + NestJS</h2>
+    <p>
+      Aunque mi foco principal es el diseño de interfaces y la lógica del cliente, mi experiencia
+      explorando NestJS me aporta una visión global del ciclo de vida de los datos y una
+      comunicación fluida con el backend.
+    </p>
+  </header>
+
+  <div class="concepts-grid">
+    @for (concept of concepts(); track concept.title) {
+      <div class="concept-card">
+        <h3>{{ concept.title }}</h3>
+        <p>{{ concept.description }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="note-box">
+    <strong>¿Por qué suma valor al equipo?</strong>
+    <p>
+      Al entender la estructura interna de una API en NestJS (controladores, servicios, DTOs),
+      ahorro tiempo a los desarrolladores backend: sé qué datos solicitar, cómo estructurar los
+      *payloads* y cómo interpretar logs o fallos en las peticiones.
+    </p>
+  </div>
+</section>

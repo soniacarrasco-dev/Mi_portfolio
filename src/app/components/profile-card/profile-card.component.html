@@ -1,0 +1,55 @@
+<main class="portfolio-container">
+  <!-- Cabecera / Info Personal -->
+  <header class="hero-section">
+    <div class="avatar-wrapper">
+      <img [src]="photoUrl()" [alt]="name()" class="profile-photo" />
+    </div>
+    <div class="hero-details">
+      <h1 class="user-name">{{ name() }}</h1>
+      <p class="user-role">{{ role() }}</p>
+      <p class="user-bio">{{ bio() }}</p>
+
+      <div class="cta-actions">
+        <a href="mailto:sonia.carrasco@example.com" class="btn btn-primary">Contactar</a>
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          >GitHub</a
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- Habilidades Técnicas -->
+  <section class="section skills-section">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <ul class="badge-list">
+      @for (skill of skills(); track skill) {
+        <li class="badge">{{ skill }}</li>
+      }
+    </ul>
+  </section>
+
+  <!-- Proyectos Destacados -->
+  <section class="section projects-section">
+    <h2 class="section-title">Proyectos Destacados</h2>
+    <div class="grid-projects">
+      @for (project of featuredProjects(); track project.title) {
+        <article class="project-card">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+          <ul class="tech-tags">
+            @for (item of project.tech; track item) {
+              <li class="tag">{{ item }}</li>
+            }
+          </ul>
+          <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
+            Ver código / demo &rarr;
+          </a>
+        </article>
+      }
+    </div>
+  </section>
+</main>

@@ -1,0 +1,70 @@
+.section-intro {
+  margin-bottom: 2.5rem;
+}
+
+.section-intro h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.section-intro p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.concepts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .concepts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.concept-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.concept-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--text-primary);
+}
+
+.concept-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.note-box {
+  background-color: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.note-box strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-box p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
