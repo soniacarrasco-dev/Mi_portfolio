@@ -1,0 +1,33 @@
+<section class="contact-page">
+  <header class="page-heading">
+    <span class="eyebrow">CONTACTO</span>
+    <h1>Hablemos de tu próximo proyecto</h1>
+    <p>
+      ¿Buscas desarrollar una idea, colaborar o simplemente conectar? Estaré encantada de leerte.
+    </p>
+  </header>
+
+  <div class="contact-card">
+    <div class="contact-copy">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="m3 7 9 6 9-6"></path>
+        </svg>
+      </span>
+      <div>
+        <h2>Escríbeme un correo</h2>
+        <p>Cuéntame brevemente qué tienes en mente y me pondré en contacto contigo.</p>
+      </div>
+    </div>
+
+    <a class="email-link" [href]="mailtoUrl">{{ email }}</a>
+
+    <a class="contact-button" [href]="mailtoUrl">
+      Enviar un mensaje
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+  <p class="closing-note">Abierta a nuevas oportunidades, proyectos y colaboraciones.</p>
+</section>
