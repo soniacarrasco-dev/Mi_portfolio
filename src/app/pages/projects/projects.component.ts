@@ -1,3 +1,4 @@
+// projects.component.ts
 import { Component, signal } from '@angular/core';
 
 export interface ProjectDetail {
@@ -20,6 +21,28 @@ export interface ProjectDetail {
 export class ProjectsComponent {
   readonly projectList = signal<ProjectDetail[]>([
     {
+      id: 'realtime-db-sync-pipeline',
+      title: 'Realtime Distributed Database Sync Pipeline',
+      category: 'Backend Distribuido & Event-Driven Streaming',
+      summary:
+        'Worker reactivo asíncrono diseñado para la sincronización continua de mutaciones de datos en tiempo real. Consume feeds HTTP continuos (_changes) desde CouchDB y traslada el estado transformado concurrentemente hacia Redis (RedisJSON) para caché de ultra baja latencia y Elasticsearch para búsquedas analíticas.',
+      highlights: [
+        'Ingesta streaming reactiva mediante HTTP chunked transfer sin sobrecarga de sondeo (polling).',
+        'Persistencia de documentos y estado estructurado en memoria usando Redis Stack (JSON.SET).',
+        'Indexación asíncrona tolerante a fallos contra nodos de Elasticsearch 8.',
+        'Entorno de orquestación reproducible en Docker Compose y generador de datos sintéticos (seeder).',
+      ],
+      tech: [
+        'NestJS',
+        'TypeScript',
+        'CouchDB',
+        'Redis Stack (RedisJSON)',
+        'Elasticsearch',
+        'Docker Compose',
+      ],
+      githubUrl: 'https://github.com/soniacarrasco-dev/realtime-db-sync-pipeline',
+    },
+    {
       id: 'smart-agenda',
       title: 'Smart Agenda Académica (Proyecto Fin de Grado)',
       category: 'Herramienta de Productividad & Organización',
@@ -31,7 +54,7 @@ export class ProjectsComponent {
         'Enfoque prioritario en UX/UI limpia y accesible para evitar sobrecarga visual.',
       ],
       tech: ['Angular', 'TypeScript', 'Reactive Forms', 'CSS Grid/Flexbox'],
-      githubUrl: 'https://github.com/tu-usuario/smart-agenda-tfg',
+      githubUrl: 'https://github.com/soniacarrasco-dev/smart-agenda-tfg',
       demoUrl: 'https://smart-agenda-demo.vercel.app',
     },
     {
@@ -46,7 +69,7 @@ export class ProjectsComponent {
         'Exportación de informes diarios de ventas y stock en formatos legibles.',
       ],
       tech: ['Angular', 'TypeScript', 'LocalStorage / IndexedDB', 'Modular CSS', 'Export APIs'],
-      githubUrl: 'https://github.com/tu-usuario/tpv-cerveceria-offline',
+      githubUrl: 'https://github.com/soniacarrasco-dev/tpv-cerveceria-offline',
     },
   ]);
 }

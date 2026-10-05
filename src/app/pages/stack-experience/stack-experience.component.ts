@@ -19,14 +19,14 @@ export class StackExperienceComponent {
         'Conocimiento del flujo de petición y respuesta: inyección del `HttpClient` de Angular para comunicarse con los controladores de NestJS (`@Get()`, `@Post()`, `@Body()`), gestionando respuestas asíncronas y transformaciones de datos limpias.',
     },
     {
-      title: 'Manejo de Errores e Interceptores HTTP',
+      title: 'Tratamiento de Datos en Tiempo Real & Streaming',
       description:
-        'Comprensión del tratamiento de respuestas HTTP estándar emitidas por NestJS (códigos de estado 400, 401, 404, 500) para mostrar feedback contextual, notificaciones de error y estados de carga coherentes en la interfaz.',
+        'Experiencia implementando daemons en NestJS que consumen streams continuos (como el feed `_changes` de CouchDB) y propagan mutaciones a motores como Redis y Elasticsearch, comprendiendo el ciclo de vida de los datos desde su origen hasta el cliente.',
     },
     {
-      title: 'Arquitectura Modular Homogénea',
+      title: 'Arquitectura Modular Homogénea & Dockerización',
       description:
-        'Ambos frameworks comparten una filosofía similar basada en inyección de dependencias, decoradores y separación de responsabilidades. Esto me facilita leer, auditar y colaborar en código NestJS sin salir de mi zona de confort en TypeScript.',
+        'Ambos frameworks comparten una filosofía similar basada en inyección de dependencias, decoradores y separación de responsabilidades. Uso de Docker Compose para orquestar la infraestructura local (Redis, CouchDB, Elasticsearch) de forma reproducible.',
     },
   ]);
 }

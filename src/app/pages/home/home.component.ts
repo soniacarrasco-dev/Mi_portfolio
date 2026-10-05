@@ -10,9 +10,10 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
   readonly name = signal('Sonia Carrasco');
-  readonly title = signal('Desarrolladora Web Frontend (Angular)');
+  readonly title = signal('Desarrolladora Web Frontend (Angular) & Backend (NestJS)');
+
   readonly bio = signal(
-    'Especializada en crear interfaces modernas, componentes desacoplados y soluciones web con Angular. Interés constante por la usabilidad, el diseño reactivo y la integración limpia con servicios backend.',
+    'Especializada en crear interfaces modernas y reactivas con Angular, con capacidad probada para construir microservicios y pipelines de sincronización asíncrona con NestJS, Redis y Elasticsearch.',
   );
 
   // Rutas a tus imágenes en la carpeta public
@@ -25,10 +26,10 @@ export class HomeComponent {
   readonly skills = signal([
     'Angular (v17+ / Standalone / Signals)',
     'TypeScript & JavaScript Moderno',
-    'HTML5 Semántico & CSS Modular',
-    'NestJS (REST APIs / Controladores / Servicios)',
-    'Gestión de Estado y Servicios Reactivos',
-    'Git & GitHub Workflow',
+    'NestJS (REST APIs / Workers Reactivos / Inyección de Dependencias)',
+    'Bases de Datos & Caché (CouchDB / RedisJSON / Elasticsearch)',
+    'Contenedores & Orquestación (Docker & Docker Compose)',
+    'Gestión de Estado, Streams Asíncronos & Git Workflow',
   ]);
 
   openPhotoModal(): void {
