@@ -1,12 +1,29 @@
 <div class="layout">
   <header class="navbar">
     <a routerLink="/" class="brand">Sonia<span>.dev</span></a>
-    <nav class="nav-links">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    <button
+      type="button"
+      class="menu-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" [class.is-open]="menuOpen()" (keydown.escape)="closeMenu()">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
         >Inicio</a
       >
-      <a routerLink="/proyectos" routerLinkActive="active">Proyectos</a>
-      <a routerLink="/experiencia-fullstack" routerLinkActive="active">Angular + NestJS</a>
+      <a routerLink="/proyectos" routerLinkActive="active" (click)="closeMenu()">Proyectos</a>
+      <a routerLink="/experiencia-fullstack" routerLinkActive="active" (click)="closeMenu()"
+        >Angular + NestJS</a
+      >
     </nav>
   </header>
 

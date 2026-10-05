@@ -68,3 +68,23 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+@media (max-width: 600px) {
+  .section-intro {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-intro h2 {
+    font-size: 1.55rem;
+  }
+
+  .concepts-grid {
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .concept-card,
+  .note-box {
+    padding: 1.1rem;
+  }
+}

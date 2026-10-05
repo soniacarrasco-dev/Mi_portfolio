@@ -25,7 +25,7 @@
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 1.75rem;
+  padding: clamp(1rem, 4vw, 1.75rem);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
@@ -89,6 +89,7 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -106,4 +107,18 @@
 
 .link-btn.outline {
   color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .page-header h2 {
+    font-size: 1.55rem;
+  }
+
+  .projects-list {
+    gap: 1.25rem;
+  }
 }

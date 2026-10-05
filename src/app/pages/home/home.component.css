@@ -4,7 +4,7 @@
   align-items: center;
   gap: 2rem;
   background-color: var(--bg-card);
-  padding: 2.5rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
   border-radius: 12px;
   border: 1px solid var(--border-color);
 }
@@ -189,12 +189,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .name {
   font-size: 2.2rem;
   font-weight: 700;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .title {
@@ -229,6 +231,8 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Botón destacado de CV con animación del icono */
@@ -310,4 +314,47 @@
 .bullet {
   color: var(--accent);
   margin-right: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .hero-card {
+    gap: 1.25rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .btn {
+    min-width: 0;
+    min-height: 44px;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .modal-footer {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .skills-block {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .actions {
+    grid-template-columns: 1fr;
+  }
 }

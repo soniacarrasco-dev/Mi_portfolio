@@ -10,4 +10,13 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('mi-portfolio');
+  protected readonly menuOpen = signal(false);
+
+  protected toggleMenu(): void {
+    this.menuOpen.update((isOpen) => !isOpen);
+  }
+
+  protected closeMenu(): void {
+    this.menuOpen.set(false);
+  }
 }
